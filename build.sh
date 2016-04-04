@@ -1,5 +1,5 @@
 #!/bin/bash
-# Stock kernel for Samsung Galaxy S5 build script by jcadduono
+# NetHunter kernel for Samsung Galaxy S5 build script by jcadduono
 # This build script is for TouchWiz only
 
 ################### BEFORE STARTING ################
@@ -62,7 +62,7 @@ export ARCH=arm
 export CROSS_COMPILE=$TOOLCHAIN/bin/arm-eabi-
 
 [ "$DEVICE" ] || DEVICE=klte
-[ "$TARGET" ] || TARGET=stock
+[ "$TARGET" ] || TARGET=nethunter
 [ "$1" ] && {
 	VARIANT=$1
 } || {

@@ -10,7 +10,7 @@ TOOLCHAIN=$HOME/build/toolchain/arm-cortex_a15-linux-gnueabihf-linaro_4.9.4-2015
 export ARCH=arm
 export CROSS_COMPILE=$TOOLCHAIN/bin/arm-eabi-
 
-[ "$TARGET" ] || TARGET=stock
+[ "$TARGET" ] || TARGET=nethunter
 [ "$DEVICE" ] || DEVICE=klte
 DEFCONFIG="${TARGET}_${DEVICE}_defconfig"
 DEFCONFIG_FILE=$RDIR/arch/$ARCH/configs/$DEFCONFIG
