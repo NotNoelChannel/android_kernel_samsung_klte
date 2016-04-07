@@ -1,6 +1,6 @@
 #!/bin/bash
-# Stock kernel for Samsung Galaxy S5 build script by jcadduono
-# This build script is for TouchWiz only
+# TWRP kernel for Samsung Galaxy S5 build script by jcadduono
+# This build script is for TeamWin Recovery Project only
 
 ################### BEFORE STARTING ################
 #
@@ -15,26 +15,14 @@
 #
 ##################### VARIANTS #####################
 #
-# eur     = kltexx, kltecan, kltetmo, klteub, klteatt
-#           G900F,  G900W8,  G900T,   G900M,  G900A
-#
-# spr     = kltespr, kltedv
-#           G900P,   G900I
-#
-# usc     = klteusc
-#           G900R4
-#
-# vzw     = kltevzw
-#           G900V
+# unified = kltexx, kltecan, kltetmo, klteub, kltespr, kltedv
+#           G900F,  G900W8,  G900T,   G900M,  G900P,   G900I
 #
 # duos    = klteduos
 #           G900FD
 #
-# chn     = kltezn, kltezm
-#           G9006V, SM-G9008V
-#
-# chnduo  = klteduoszn, klteduoszm, klteduosctc
-#           SM-G9006W, SM-G9008W, SM-G9009W
+# chn     = kltezn, kltezm,    klteduoszn, klteduoszm, klteduosctc
+#           G9006V, SM-G9008V, SM-G9006W,  SM-G9008W,  SM-G9009W
 #
 # kdi     = kltekdi, kltedcm
 #           SCL23,   SC-04F
@@ -63,9 +51,9 @@ export ARCH=arm
 export CROSS_COMPILE=$TOOLCHAIN/bin/arm-linux-gnueabihf-
 
 [ "$DEVICE" ] || DEVICE=klte
-[ "$TARGET" ] || TARGET=stock
+[ "$TARGET" ] || TARGET=twrp
 [ "$1" ] && VARIANT=$1
-[ "$VARIANT" ] || VARIANT=eur
+[ "$VARIANT" ] || VARIANT=unified
 DEFCONFIG=${TARGET}_${DEVICE}_defconfig
 VARIANT_DEFCONFIG=variant_${DEVICE}_${VARIANT}
 
