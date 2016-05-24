@@ -19,9 +19,9 @@ MOVE_IMAGES()
 {
 	echo "Moving kernel zImage and dtb.img to $VARIANT_DIR/..."
 	mkdir -p "$VARIANT_DIR"
-	rm -f "$VARIANT_DIR/zImage-L" "$VARIANT_DIR/dtb.img-L"
-	mv "$KDIR/zImage" "$VARIANT_DIR/zImage-L"
-	mv "$KDIR/dtb.img" "$VARIANT_DIR/dtb.img-L"
+	rm -f "$VARIANT_DIR/zImage" "$VARIANT_DIR/dtb.img"
+	mv "$KDIR/zImage" "$VARIANT_DIR/zImage"
+	mv "$KDIR/dtb.img" "$VARIANT_DIR/dtb.img"
 }
 
 mkdir -p $OUT_DIR
